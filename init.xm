@@ -3,7 +3,7 @@
 
 %ctor {
     @autoreleasepool {
-    	NSString *libraryPath = @"/var/jb/Library/Application Support/RevealLoader/RevealServer";
+    	NSString *libraryPath = @"/Frameworks/RevealServer.framework/RevealServer";
 
     	if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath]) {
     		void *handle = dlopen([libraryPath UTF8String], RTLD_NOW);
